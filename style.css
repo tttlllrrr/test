@@ -1,5 +1,3 @@
-The issue is that the dynamic width can exceed the available space in the fixed `820px` container, which makes the grid behave poorly. I've kept the original 300px desktop sizing, but made the **hero itself responsive** so the splat can scale down when necessary. The mobile layout remains unchanged.
-
 ```css
 :root {
     --text: #222;
