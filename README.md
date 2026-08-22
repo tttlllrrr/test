@@ -1,2 +1,2 @@
 # test
-github tutorial
+Taylor Shechet, Composer, Sound Designer & Technical artist.
