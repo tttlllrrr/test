@@ -1,230 +1,667 @@
-:root {
-    --text: #202020;
-    --muted: #6b6b6b;
-    --rule: #d8d8d8;
-    --background: #fafafa;
-    --link: #333333;
-    --button-background: #eeeeee;
-}
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Taylor Shechet - Sound Designer, Composer, and Technical Artist">
+    <title>Taylor Shechet</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="container">
+            <h1>Taylor Shechet</h1>
+            <p class="subtitle">Sound Designer · Composer · Technical Artist</p>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section>
+            <h2>About</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.
+            </p>
+        </section>
+
+
+        <section>
+            <h2>Professional Experience</h2>
+
+            <article class="entry">
+                <div class="entry-heading">
+                    <h3>Senior Technical Artist, Real-Time Software</h3>
+                    <span>2022–2026</span>
+                </div>
+                <p class="organization">Sphere Entertainment</p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Integer posuere erat a ante. Donec ullamcorper nulla non metus
+                    auctor fringilla.
+                </p>
+            </article>
+
+            <article class="entry">
+                <div class="entry-heading">
+                    <h3>Sound Designer &amp; Composer</h3>
+                    <span>2018–Present</span>
+                </div>
+                <p class="organization">Freelance</p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Aenean lacinia bibendum nulla sed consectetur. Cras mattis
+                    consectetur purus sit amet fermentum.
+                </p>
+            </article>
+
+        </section>
+
+
+        <section>
+            <h2>Selected Game Credits</h2>
+
+            <article class="credit">
+                <div class="credit-heading">
+                    <h3>Gloomwood</h3>
+                    <span>2022</span>
+                </div>
+                <p class="roles">
+                    Sound Design · Music · Audio Implementation
+                </p>
+                <p class="organization">
+                    New Blood Interactive
+                </p>
+                <p class="description">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+                </p>
+            </article>
+
+            <article class="credit">
+                <div class="credit-heading">
+                    <h3>El Paso Elsewhere 2</h3>
+                    <span>2026</span>
+                </div>
+                <p class="roles">
+                    Sound Design
+                </p>
+                <p class="organization">
+                    Strange Scaffold
+                </p>
+                <p class="description">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Donec id elit non mi porta gravida at eget metus.
+                </p>
+            </article>
+
+            <article class="credit">
+                <div class="credit-heading">
+                    <h3>The Cave Diver</h3>
+                    <span>2024</span>
+                </div>
+                <p class="roles">
+                    Sound Design · Music · Audio Implementation
+                </p>
+                <p class="organization">
+                    OVSKO
+                </p>
+                <p class="description">
+                    Officially released game soundtrack.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Maecenas faucibus mollis interdum.
+                </p>
+            </article>
+
+            <article class="credit">
+                <div class="credit-heading">
+                    <h3>RUNT</h3>
+                    <span>2024</span>
+                </div>
+                <p class="roles">
+                    Music · Sound Design
+                </p>
+                <p class="organization">
+                    Grimtaste Studios / DreadXP
+                </p>
+                <p class="description">
+                    Soundtrack work with Stephen Spies.
+                    Officially released game soundtrack.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+            </article>
+
+            <article class="credit">
+                <div class="credit-heading">
+                    <h3>Gilgamesh Drift</h3>
+                    <span>2025</span>
+                </div>
+                <p class="roles">
+                    Music · Sound Design · Unreal Engine Implementation
+                </p>
+                <p class="organization">
+                    Mesh Collective
+                </p>
+                <p class="description">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Curabitur blandit tempus porttitor.
+                </p>
+            </article>
+
+        </section>
+
+
+        <section id="music">
+            <h2>Music</h2>
+
+            <div class="music-filter" role="group" aria-label="Filter music by alias">
+                <button class="filter-button active" data-filter="all">All</button>
+                <button class="filter-button" data-filter="taylor">Taylor Shechet</button>
+                <button class="filter-button" data-filter="tlr">tlr / [tlr]</button>
+                <button class="filter-button" data-filter="tttlllrrr">tttlllrrr</button>
+                <button class="filter-button" data-filter="tlrshcht">tlrshcht</button>
+                <button class="filter-button" data-filter="outer-night">Outer Night</button>
+                <button class="filter-button" data-filter="polychron">Polychron</button>
+                <button class="filter-button" data-filter="romak">Romak &amp; the Space Pirates</button>
+            </div>
+
+
+            <div class="music-discography">
+
+                <article class="credit music-release" data-aliases="tttlllrrr">
+                    <div class="credit-heading">
+                        <h3><em>2000 Ice Creamz</em></h3>
+                        <span>2025</span>
+                    </div>
+                    <p class="roles">
+                        Music · Production · Remix
+                    </p>
+                    <p class="organization">
+                        tttlllrrr · Space Anemone Records
+                    </p>
+                    <p class="description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Nullam id dolor id nibh ultricies vehicula ut id elit.
+                        Includes the Brain Weld remix.
+                    </p>
+                </article>
+
+
+                <article class="credit music-release" data-aliases="tlr [tlr]">
+                    <div class="credit-heading">
+                        <h3><em>Selected Releases</em></h3>
+                        <span></span>
+                    </div>
+                    <p class="roles">
+                        Music · Production
+                    </p>
+                    <p class="organization">
+                        tlr · [tlr]
+                    </p>
+                    <p class="description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Aenean lacinia bibendum nulla sed consectetur.
+                    </p>
+                </article>
+
+
+                <article class="credit music-release" data-aliases="taylor">
+                    <div class="credit-heading">
+                        <h3><em>Taylor Shechet</em></h3>
+                        <span></span>
+                    </div>
+                    <p class="roles">
+                        Music · Composition · Production
+                    </p>
+                    <p class="organization">
+                        Taylor Shechet
+                    </p>
+                    <p class="description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
+                </article>
+
+
+                <article class="credit music-release" data-aliases="tlrshcht">
+                    <div class="credit-heading">
+                        <h3><em>Selected Releases</em></h3>
+                        <span></span>
+                    </div>
+                    <p class="roles">
+                        Music · Production
+                    </p>
+                    <p class="organization">
+                        tlrshcht
+                    </p>
+                    <p class="description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
+                </article>
+
+
+                <article class="credit music-release" data-aliases="outer-night">
+                    <div class="credit-heading">
+                        <h3><em>Outer Night</em></h3>
+                        <span></span>
+                    </div>
+                    <p class="roles">
+                        Music · Production
+                    </p>
+                    <p class="organization">
+                        Outer Night
+                    </p>
+                    <p class="description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
+                </article>
+
+
+                <article class="credit music-release" data-aliases="polychron">
+                    <div class="credit-heading">
+                        <h3><em>Polychron</em></h3>
+                        <span></span>
+                    </div>
+                    <p class="roles">
+                        Music · Production
+                    </p>
+                    <p class="organization">
+                        Polychron
+                    </p>
+                    <p class="description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
+                </article>
+
+
+                <article class="credit music-release" data-aliases="romak">
+                    <div class="credit-heading">
+                        <h3>Romak &amp; the Space Pirates</h3>
+                        <span>2021</span>
+                    </div>
+                    <p class="roles">
+                        Band Member · Music
+                    </p>
+                    <p class="organization">
+                        Romak &amp; the Space Pirates
+                    </p>
+                    <p class="description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        <a href="https://www.discogs.com/release/17575051-Romak-And-The-Space-Pirates-Vyncent-Flaw-Never-Gunna-Say-Whats-Up"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            View release on Discogs
+                        </a>
+                    </p>
+                </article>
+
+
+                <article class="credit music-release" data-aliases="memorrhage">
+                    <div class="credit-heading">
+                        <h3><em>Memorrhage</em></h3>
+                        <span></span>
+                    </div>
+                    <p class="roles">
+                        Scratching
+                    </p>
+                    <p class="organization">
+                        Memorrhage
+                    </p>
+                    <p class="description">
+                        Scratching contributions to the first two albums,
+                        <em>Memorrhage</em> and <em>Anyo</em>.
+                    </p>
+                </article>
+
+
+                <article class="credit music-release" data-aliases="taylor">
+                    <div class="credit-heading">
+                        <h3>Work with Bao Vo</h3>
+                        <span></span>
+                    </div>
+                    <p class="roles">
+                        Music · Collaboration
+                    </p>
+                    <p class="organization">
+                        Bao Vo
+                    </p>
+                    <p class="description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
+                </article>
+
+
+                <article class="credit music-release" data-aliases="taylor">
+                    <div class="credit-heading">
+                        <h3>Work with Ming &amp; Ping</h3>
+                        <span></span>
+                    </div>
+                    <p class="roles">
+                        Music · Collaboration
+                    </p>
+                    <p class="organization">
+                        Ming &amp; Ping
+                    </p>
+                    <p class="description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
+                </article>
+
+
+                <article class="credit music-release" data-aliases="taylor">
+                    <div class="credit-heading">
+                        <h3>GRYPT</h3>
+                        <span></span>
+                    </div>
+                    <p class="roles">
+                        Music · Production
+                    </p>
+                    <p class="organization">
+                        Tundra Dubs · Cleopatra Records · Deathbomb Arc
+                    </p>
+                    <p class="description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
+                </article>
+
+            </div>
+        </section>
+
+
+        <section>
+            <h2>Technical Practice</h2>
+
+            <p class="skills">
+                Unreal Engine · MetaSounds · nDisplay · Houdini · Blender ·
+                Substance Designer · Substance Painter · Python · OSC · NDI ·
+                DMX · Notch · TouchDesigner · Resolume · Ableton Live
+            </p>
+
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+            </p>
+        </section>
+
+
+        <section>
+            <h2>Contact</h2>
+
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                <a href="mailto:your@email.com">your@email.com</a>
+            </p>
+        </section>
+
+    </main>
+
+
+    <footer>
+        <div class="container">
+            <p>© 2026 Taylor Shechet</p>
+        </div>
+    </footer>
+
+
+    <script>
+        const buttons = document.querySelectorAll(".filter-button");
+        const releases = document.querySelectorAll(".music-release");
+
+        buttons.forEach(button => {
+            button.addEventListener("click", () => {
+
+                buttons.forEach(btn => btn.classList.remove("active"));
+                button.classList.add("active");
+
+                const filter = button.dataset.filter;
+
+                releases.forEach(release => {
+                    const aliases = release.dataset.aliases.split(" ");
+
+                    if (filter === "all" || aliases.includes(filter)) {
+                        release.style.display = "";
+                    } else {
+                        release.style.display = "none";
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
+```
+
+```css
+/* ========================================
+   Base
+   ======================================== */
 
 * {
     box-sizing: border-box;
 }
 
 html {
-    font-size: 16px;
     scroll-behavior: smooth;
 }
 
 body {
     margin: 0;
-    background: var(--background);
-    color: var(--text);
+    background: #fafafa;
+    color: #222;
     font-family: Georgia, "Times New Roman", serif;
-    line-height: 1.7;
+    font-size: 17px;
+    line-height: 1.65;
 }
 
 .container {
-    width: 100%;
-    max-width: 900px;
+    width: min(100% - 48px, 900px);
     margin: 0 auto;
-    padding-left: 32px;
-    padding-right: 32px;
 }
 
-.page-content {
-    width: 100%;
-    max-width: 720px;
-}
+
+/* ========================================
+   Header
+   ======================================== */
 
 .site-header {
-    padding-top: 80px;
-    padding-bottom: 70px;
+    padding: 72px 0 48px;
+    border-bottom: 1px solid #ddd;
 }
 
-h1,
-h2,
-h3 {
-    font-weight: normal;
-    line-height: 1.25;
-}
-
-h1 {
+.site-header h1 {
     margin: 0;
-    font-size: 3rem;
+    font-size: clamp(2.4rem, 7vw, 4rem);
+    font-weight: 400;
     letter-spacing: -0.03em;
-}
-
-h2 {
-    margin: 0 0 35px;
-    padding-bottom: 12px;
-    border-bottom: 1px solid var(--rule);
-    font-size: 1.35rem;
-}
-
-h3 {
-    margin: 0;
-    font-size: 1.15rem;
-}
-
-p {
-    margin-top: 0;
+    line-height: 1.1;
 }
 
 .subtitle {
-    margin-top: 10px;
-    color: var(--muted);
-    font-size: 1rem;
+    margin: 12px 0 0;
+    color: #666;
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+    font-size: 0.9rem;
+    letter-spacing: 0.03em;
 }
 
+
+/* ========================================
+   Sections
+   ======================================== */
+
 section {
-    margin-bottom: 80px;
+    padding: 56px 0;
+    border-bottom: 1px solid #ddd;
 }
+
+section:last-child {
+    border-bottom: none;
+}
+
+section h2 {
+    margin: 0 0 32px;
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #555;
+}
+
+
+/* ========================================
+   Entries
+   ======================================== */
 
 .entry,
 .credit {
-    margin-bottom: 45px;
+    margin-bottom: 42px;
+}
+
+.entry:last-child,
+.credit:last-child {
+    margin-bottom: 0;
 }
 
 .entry-heading,
 .credit-heading {
     display: flex;
-    justify-content: space-between;
     align-items: baseline;
-    gap: 30px;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.entry-heading h3,
+.credit-heading h3 {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.35;
 }
 
 .entry-heading span,
 .credit-heading span {
-    flex-shrink: 0;
-    color: var(--muted);
-    font-size: 0.9rem;
+    flex: 0 0 auto;
+    color: #777;
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+    font-size: 0.8rem;
+    white-space: nowrap;
 }
 
 .organization {
-    margin: 5px 0 12px;
-    color: var(--muted);
-    font-size: 0.95rem;
+    margin: 4px 0 10px;
+    color: #666;
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+    font-size: 0.88rem;
 }
 
 .roles {
-    margin: 7px 0 12px;
-    color: var(--text);
-    font-size: 0.95rem;
-    font-style: italic;
+    margin: 8px 0;
+    color: #555;
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+    font-size: 0.82rem;
+    letter-spacing: 0.01em;
 }
 
 .description {
-    max-width: 680px;
+    margin: 10px 0 0;
 }
 
 .skills {
-    color: var(--muted);
-    line-height: 2;
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.8;
+    color: #444;
 }
 
-.intro {
-    max-width: 680px;
-    margin-bottom: 32px;
-}
+
+/* ========================================
+   Music Filters
+   ======================================== */
 
 .music-filter {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
-    margin-bottom: 55px;
+    margin: -8px 0 40px;
 }
 
 .filter-button {
-    border: 1px solid var(--rule);
-    border-radius: 3px;
-    padding: 7px 12px;
+    appearance: none;
+    border: 1px solid #ccc;
     background: transparent;
-    color: var(--text);
-    font-family: inherit;
-    font-size: 0.88rem;
+    color: #555;
+    padding: 7px 12px;
+    border-radius: 2px;
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+    font-size: 0.78rem;
     cursor: pointer;
     transition:
-        background-color 0.15s ease,
+        background 0.15s ease,
         color 0.15s ease,
         border-color 0.15s ease;
 }
 
 .filter-button:hover {
-    background: var(--button-background);
+    border-color: #999;
+    color: #222;
 }
 
 .filter-button.active {
-    background: var(--text);
-    border-color: var(--text);
-    color: var(--background);
+    background: #222;
+    border-color: #222;
+    color: #fff;
 }
 
-.music-entry {
-    animation: music-fade-in 0.15s ease;
-}
 
-.music-category {
-    margin: 0 0 30px;
-    padding-top: 18px;
-    border-top: 1px solid var(--rule);
-    font-size: 1.15rem;
-    font-weight: normal;
-}
-
-.music-entry + .music-entry {
-    margin-top: 58px;
-}
-
-.aliases {
-    color: var(--muted);
-    line-height: 1.9;
-}
+/* ========================================
+   Links
+   ======================================== */
 
 a {
-    color: var(--link);
+    color: inherit;
     text-decoration-thickness: 1px;
     text-underline-offset: 3px;
 }
 
 a:hover {
-    text-decoration: none;
+    color: #666;
 }
+
+
+/* ========================================
+   Footer
+   ======================================== */
 
 footer {
-    padding: 40px 0 60px;
-    border-top: 1px solid var(--rule);
-    color: var(--muted);
-    font-size: 0.85rem;
+    padding: 32px 0 48px;
+    color: #888;
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+    font-size: 0.75rem;
 }
 
-@keyframes music-fade-in {
-    from {
-        opacity: 0.7;
-    }
 
-    to {
-        opacity: 1;
-    }
-}
+/* ========================================
+   Mobile
+   ======================================== */
 
 @media (max-width: 600px) {
+
     .container {
-        padding-left: 22px;
-        padding-right: 22px;
+        width: min(100% - 32px, 900px);
     }
 
     .site-header {
-        padding-top: 50px;
-        padding-bottom: 50px;
-    }
-
-    h1 {
-        font-size: 2.3rem;
+        padding: 48px 0 36px;
     }
 
     section {
-        margin-bottom: 60px;
+        padding: 42px 0;
     }
 
     .entry-heading,
@@ -235,21 +672,21 @@ footer {
     .entry-heading span,
     .credit-heading span {
         display: block;
-        margin-top: 5px;
+        margin-top: 4px;
     }
 
-    .entry,
-    .credit {
-        margin-bottom: 38px;
+    .entry-heading h3,
+    .credit-heading h3 {
+        font-size: 1.15rem;
     }
 
     .music-filter {
         gap: 6px;
-        margin-bottom: 42px;
     }
 
     .filter-button {
         padding: 6px 9px;
-        font-size: 0.82rem;
+        font-size: 0.74rem;
     }
 }
+```
