@@ -1,3 +1,5 @@
+The issue is that the dynamic width can exceed the available space in the fixed `820px` container, which makes the grid behave poorly. I've kept the original 300px desktop sizing, but made the **hero itself responsive** so the splat can scale down when necessary. The mobile layout remains unchanged.
+
 ```css
 :root {
     --text: #222;
@@ -39,7 +41,7 @@ body {
 
 .hero {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) clamp(260px, 30vw, 360px);
+    grid-template-columns: minmax(0, 1fr) minmax(260px, 300px);
     gap: 40px;
     align-items: center;
 }
@@ -67,8 +69,10 @@ body {
 
 .splat-container {
     position: relative;
-    width: clamp(260px, 30vw, 360px);
+    width: 100%;
+    max-width: 300px;
     aspect-ratio: 1;
+    justify-self: end;
 }
 
 .splat-container iframe {
@@ -310,6 +314,7 @@ footer p {
 
     .splat-container {
         width: min(280px, 100%);
+        max-width: 280px;
         margin: 0 auto;
     }
 
