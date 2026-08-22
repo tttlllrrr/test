@@ -1,10 +1,10 @@
-```css
 :root {
-    --text: #1a1a1a;
-    --muted: #666;
-    --light: #ddd;
+    --text: #171717;
+    --muted: #707070;
+    --rule: #d8d8d8;
     --background: #fafafa;
-    --max-width: 760px;
+    --max-width: 820px;
+    --side-padding: 42px;
 }
 
 * {
@@ -26,60 +26,64 @@ body {
         Helvetica,
         Arial,
         sans-serif;
-    font-size: 17px;
+    font-size: 16px;
     line-height: 1.65;
 }
 
 .container {
-    width: min(100% - 40px, var(--max-width));
+    width: 100%;
+    max-width: var(--max-width);
     margin: 0 auto;
+    padding-left: var(--side-padding);
+    padding-right: var(--side-padding);
 }
 
-main {
-    padding-bottom: 80px;
-}
 
-
-/* Header */
+/* --------------------------------
+   Header
+-------------------------------- */
 
 .site-header {
-    padding: 90px 0 70px;
+    padding-top: 90px;
+    padding-bottom: 75px;
 }
 
 .site-header h1 {
     margin: 0;
     font-family: Georgia, "Times New Roman", serif;
-    font-size: clamp(2.6rem, 7vw, 4.5rem);
+    font-size: clamp(3rem, 8vw, 5rem);
     font-weight: normal;
-    letter-spacing: -0.04em;
-    line-height: 1;
+    letter-spacing: -0.045em;
+    line-height: 0.95;
 }
 
 .subtitle {
-    margin: 18px 0 0;
+    margin: 22px 0 0;
     color: var(--muted);
-    font-size: 1rem;
-    letter-spacing: 0.02em;
+    font-size: 0.95rem;
+    letter-spacing: 0.01em;
 }
 
 
-/* Sections */
+/* --------------------------------
+   Sections
+-------------------------------- */
 
 section {
-    padding: 55px 0;
-    border-top: 1px solid var(--light);
+    padding: 58px 0;
+    border-top: 1px solid var(--rule);
 }
 
 section:first-child {
-    border-top: 0;
+    border-top: none;
 }
 
 h2 {
-    margin: 0 0 30px;
+    margin: 0 0 32px;
     font-family: Georgia, "Times New Roman", serif;
-    font-size: 1.65rem;
+    font-size: 1.5rem;
     font-weight: normal;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.025em;
 }
 
 p {
@@ -87,10 +91,12 @@ p {
 }
 
 
-/* General professional entries */
+/* --------------------------------
+   Professional experience
+-------------------------------- */
 
 .entry {
-    margin-bottom: 42px;
+    margin-bottom: 46px;
 }
 
 .entry:last-child {
@@ -101,33 +107,35 @@ p {
     display: flex;
     align-items: baseline;
     justify-content: space-between;
-    gap: 30px;
-    margin-bottom: 4px;
+    gap: 32px;
 }
 
 .entry-heading h3 {
     margin: 0;
-    font-size: 1.05rem;
+    font-size: 1rem;
     font-weight: 600;
-    line-height: 1.4;
+    line-height: 1.45;
 }
 
 .entry-heading span {
     flex-shrink: 0;
     color: var(--muted);
-    font-size: 0.9rem;
+    font-size: 0.85rem;
 }
 
 .organization {
+    margin: 3px 0 14px;
     color: var(--muted);
-    font-size: 0.95rem;
+    font-size: 0.9rem;
 }
 
 
-/* Game / project credits */
+/* --------------------------------
+   Project credits
+-------------------------------- */
 
 .credit {
-    margin-bottom: 44px;
+    margin-bottom: 48px;
 }
 
 .credit:last-child {
@@ -138,39 +146,39 @@ p {
     display: flex;
     align-items: baseline;
     justify-content: space-between;
-    gap: 30px;
-    margin-bottom: 2px;
+    gap: 32px;
 }
 
 .credit-heading h3 {
     margin: 0;
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 600;
-    line-height: 1.4;
+    line-height: 1.45;
 }
 
 .credit-heading span {
     flex-shrink: 0;
     color: var(--muted);
+    font-size: 0.85rem;
+}
+
+.credit .roles {
+    margin: 4px 0 0;
     font-size: 0.9rem;
 }
 
-.roles {
-    margin: 3px 0 0;
-    font-size: 0.95rem;
-    font-weight: 500;
-}
-
 .credit .organization {
-    margin: 0 0 12px;
+    margin: 0 0 14px;
 }
 
 .description {
-    margin-top: 0;
+    max-width: 650px;
 }
 
 
-/* Technical skills */
+/* --------------------------------
+   Technical skills
+-------------------------------- */
 
 .skills {
     color: var(--muted);
@@ -178,12 +186,14 @@ p {
 }
 
 
-/* Links */
+/* --------------------------------
+   Links
+-------------------------------- */
 
 a {
-    color: var(--text);
+    color: inherit;
     text-decoration-thickness: 1px;
-    text-underline-offset: 3px;
+    text-underline-offset: 4px;
 }
 
 a:hover {
@@ -191,30 +201,40 @@ a:hover {
 }
 
 
-/* Footer */
+/* --------------------------------
+   Footer
+-------------------------------- */
 
 footer {
-    border-top: 1px solid var(--light);
-    padding: 30px 0 50px;
+    border-top: 1px solid var(--rule);
+    padding-top: 30px;
+    padding-bottom: 55px;
     color: var(--muted);
-    font-size: 0.85rem;
+    font-size: 0.8rem;
 }
 
 
-/* Mobile */
+/* --------------------------------
+   Mobile
+-------------------------------- */
 
 @media (max-width: 600px) {
 
-    .container {
-        width: min(100% - 30px, var(--max-width));
+    :root {
+        --side-padding: 24px;
     }
 
     .site-header {
-        padding: 55px 0 50px;
+        padding-top: 55px;
+        padding-bottom: 55px;
+    }
+
+    .site-header h1 {
+        font-size: clamp(2.8rem, 15vw, 4rem);
     }
 
     section {
-        padding: 40px 0;
+        padding: 42px 0;
     }
 
     .entry-heading,
@@ -228,8 +248,7 @@ footer {
         margin-top: 4px;
     }
 
-    body {
-        font-size: 16px;
+    .container {
+        width: 100%;
     }
 }
-```
