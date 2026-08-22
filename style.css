@@ -1,0 +1,201 @@
+/* --------------------------------
+   Base
+-------------------------------- */
+
+:root {
+    --text: #1a1a1a;
+    --muted: #666;
+    --light: #ddd;
+    --background: #fafafa;
+    --accent: #333;
+    --max-width: 760px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--background);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue",
+        Helvetica, Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.65;
+}
+
+/* --------------------------------
+   Layout
+-------------------------------- */
+
+.container {
+    width: min(100% - 40px, var(--max-width));
+    margin: 0 auto;
+}
+
+main {
+    padding-bottom: 80px;
+}
+
+/* --------------------------------
+   Header
+-------------------------------- */
+
+.site-header {
+    padding: 90px 0 70px;
+}
+
+.site-header h1 {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2.6rem, 7vw, 4.5rem);
+    font-weight: normal;
+    letter-spacing: -0.04em;
+    line-height: 1;
+}
+
+.subtitle {
+    margin: 18px 0 0;
+    color: var(--muted);
+    font-size: 1rem;
+    letter-spacing: 0.02em;
+}
+
+/* --------------------------------
+   Sections
+-------------------------------- */
+
+section {
+    padding: 55px 0;
+    border-top: 1px solid var(--light);
+}
+
+section:first-child {
+    border-top: 0;
+}
+
+h2 {
+    margin: 0 0 30px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.65rem;
+    font-weight: normal;
+    letter-spacing: -0.02em;
+}
+
+p {
+    margin: 0 0 20px;
+}
+
+p:last-child {
+    margin-bottom: 0;
+}
+
+/* --------------------------------
+   Entries
+-------------------------------- */
+
+.entry {
+    margin-bottom: 42px;
+}
+
+.entry:last-child {
+    margin-bottom: 0;
+}
+
+.entry-heading {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 4px;
+}
+
+.entry-heading h3 {
+    margin: 0;
+    font-size: 1.05rem;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.entry-heading span {
+    flex-shrink: 0;
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+.organization {
+    color: var(--muted);
+    font-size: 0.95rem;
+    margin-bottom: 12px;
+}
+
+/* --------------------------------
+   Skills
+-------------------------------- */
+
+.skills {
+    color: var(--muted);
+    line-height: 1.9;
+}
+
+/* --------------------------------
+   Links
+-------------------------------- */
+
+a {
+    color: var(--text);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+}
+
+a:hover {
+    color: var(--muted);
+}
+
+/* --------------------------------
+   Footer
+-------------------------------- */
+
+footer {
+    border-top: 1px solid var(--light);
+    padding: 30px 0 50px;
+    color: var(--muted);
+    font-size: 0.85rem;
+}
+
+/* --------------------------------
+   Mobile
+-------------------------------- */
+
+@media (max-width: 600px) {
+
+    .container {
+        width: min(100% - 30px, var(--max-width));
+    }
+
+    .site-header {
+        padding: 55px 0 50px;
+    }
+
+    section {
+        padding: 40px 0;
+    }
+
+    .entry-heading {
+        display: block;
+    }
+
+    .entry-heading span {
+        display: block;
+        margin-top: 4px;
+    }
+
+    body {
+        font-size: 16px;
+    }
+}
