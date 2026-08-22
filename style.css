@@ -30,18 +30,22 @@ body {
     line-height: 1.65;
 }
 
+
+/* Layout */
+
 .container {
     width: 100%;
     max-width: var(--max-width);
     margin: 0 auto;
+}
+
+.page-content {
     padding-left: var(--side-padding);
     padding-right: var(--side-padding);
 }
 
 
-/* --------------------------------
-   Header
--------------------------------- */
+/* Header */
 
 .site-header {
     padding-top: 90px;
@@ -65,9 +69,7 @@ body {
 }
 
 
-/* --------------------------------
-   Sections
--------------------------------- */
+/* Sections */
 
 section {
     padding: 58px 0;
@@ -91,9 +93,7 @@ p {
 }
 
 
-/* --------------------------------
-   Professional experience
--------------------------------- */
+/* Professional experience */
 
 .entry {
     margin-bottom: 46px;
@@ -130,9 +130,7 @@ p {
 }
 
 
-/* --------------------------------
-   Project credits
--------------------------------- */
+/* Project credits */
 
 .credit {
     margin-bottom: 48px;
@@ -142,13 +140,6 @@ p {
     margin-bottom: 0;
 }
 
-.credit-heading {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    gap: 32px;
-}
-
 .credit-heading h3 {
     margin: 0;
     font-size: 1rem;
@@ -156,13 +147,7 @@ p {
     line-height: 1.45;
 }
 
-.credit-heading span {
-    flex-shrink: 0;
-    color: var(--muted);
-    font-size: 0.85rem;
-}
-
-.credit .roles {
+.roles {
     margin: 4px 0 0;
     font-size: 0.9rem;
 }
@@ -176,9 +161,7 @@ p {
 }
 
 
-/* --------------------------------
-   Technical skills
--------------------------------- */
+/* Technical skills */
 
 .skills {
     color: var(--muted);
@@ -186,9 +169,7 @@ p {
 }
 
 
-/* --------------------------------
-   Links
--------------------------------- */
+/* Links */
 
 a {
     color: inherit;
@@ -201,9 +182,7 @@ a:hover {
 }
 
 
-/* --------------------------------
-   Footer
--------------------------------- */
+/* Footer */
 
 footer {
     border-top: 1px solid var(--rule);
@@ -214,9 +193,7 @@ footer {
 }
 
 
-/* --------------------------------
-   Mobile
--------------------------------- */
+/* Mobile */
 
 @media (max-width: 600px) {
 
@@ -237,18 +214,12 @@ footer {
         padding: 42px 0;
     }
 
-    .entry-heading,
-    .credit-heading {
+    .entry-heading {
         display: block;
     }
 
-    .entry-heading span,
-    .credit-heading span {
+    .entry-heading span {
         display: block;
         margin-top: 4px;
-    }
-
-    .container {
-        width: 100%;
     }
 }
