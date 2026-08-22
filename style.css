@@ -1,13 +1,9 @@
-/* --------------------------------
-   Base
--------------------------------- */
-
+```css
 :root {
     --text: #1a1a1a;
     --muted: #666;
     --light: #ddd;
     --background: #fafafa;
-    --accent: #333;
     --max-width: 760px;
 }
 
@@ -23,15 +19,16 @@ body {
     margin: 0;
     background: var(--background);
     color: var(--text);
-    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue",
-        Helvetica, Arial, sans-serif;
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Helvetica Neue",
+        Helvetica,
+        Arial,
+        sans-serif;
     font-size: 17px;
     line-height: 1.65;
 }
-
-/* --------------------------------
-   Layout
--------------------------------- */
 
 .container {
     width: min(100% - 40px, var(--max-width));
@@ -42,9 +39,8 @@ main {
     padding-bottom: 80px;
 }
 
-/* --------------------------------
-   Header
--------------------------------- */
+
+/* Header */
 
 .site-header {
     padding: 90px 0 70px;
@@ -66,9 +62,8 @@ main {
     letter-spacing: 0.02em;
 }
 
-/* --------------------------------
-   Sections
--------------------------------- */
+
+/* Sections */
 
 section {
     padding: 55px 0;
@@ -91,13 +86,8 @@ p {
     margin: 0 0 20px;
 }
 
-p:last-child {
-    margin-bottom: 0;
-}
 
-/* --------------------------------
-   Entries
--------------------------------- */
+/* General professional entries */
 
 .entry {
     margin-bottom: 42px;
@@ -131,21 +121,64 @@ p:last-child {
 .organization {
     color: var(--muted);
     font-size: 0.95rem;
-    margin-bottom: 12px;
 }
 
-/* --------------------------------
-   Skills
--------------------------------- */
+
+/* Game / project credits */
+
+.credit {
+    margin-bottom: 44px;
+}
+
+.credit:last-child {
+    margin-bottom: 0;
+}
+
+.credit-heading {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 2px;
+}
+
+.credit-heading h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.credit-heading span {
+    flex-shrink: 0;
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+.roles {
+    margin: 3px 0 0;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.credit .organization {
+    margin: 0 0 12px;
+}
+
+.description {
+    margin-top: 0;
+}
+
+
+/* Technical skills */
 
 .skills {
     color: var(--muted);
     line-height: 1.9;
 }
 
-/* --------------------------------
-   Links
--------------------------------- */
+
+/* Links */
 
 a {
     color: var(--text);
@@ -157,9 +190,8 @@ a:hover {
     color: var(--muted);
 }
 
-/* --------------------------------
-   Footer
--------------------------------- */
+
+/* Footer */
 
 footer {
     border-top: 1px solid var(--light);
@@ -168,9 +200,8 @@ footer {
     font-size: 0.85rem;
 }
 
-/* --------------------------------
-   Mobile
--------------------------------- */
+
+/* Mobile */
 
 @media (max-width: 600px) {
 
@@ -186,11 +217,13 @@ footer {
         padding: 40px 0;
     }
 
-    .entry-heading {
+    .entry-heading,
+    .credit-heading {
         display: block;
     }
 
-    .entry-heading span {
+    .entry-heading span,
+    .credit-heading span {
         display: block;
         margin-top: 4px;
     }
@@ -199,3 +232,4 @@ footer {
         font-size: 16px;
     }
 }
+```
