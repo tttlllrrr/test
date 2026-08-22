@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -313,10 +312,7 @@
         <h2>Music</h2>
 
         <div class="filter-group" data-filter-group="music">
-            <button class="filter-button active" data-filter="all">
-                All
-            </button>
-            <button class="filter-button" data-filter="taylor-shechet">
+            <button class="filter-button active" data-filter="taylor-shechet">
                 Taylor Shechet
             </button>
             <button class="filter-button" data-filter="tlr">
@@ -337,11 +333,73 @@
             <button class="filter-button" data-filter="romak">
                 Romak &amp; the Space Pirates
             </button>
+            <button class="filter-button" data-filter="all">
+                All
+            </button>
         </div>
 
         <div class="filter-spacer"></div>
 
         <div class="filter-items">
+
+            <article class="credit"
+                     data-filter-item="music"
+                     data-aliases="taylor-shechet">
+                <div class="credit-heading">
+                    <h3><em>Gloomwood OST</em></h3>
+                    <span>Unreleased</span>
+                </div>
+                <p class="roles">
+                    Composition · Sound Design · Audio Implementation
+                </p>
+                <p class="organization">
+                    New Blood Interactive
+                </p>
+                <p class="description">
+                    Original soundtrack for <em>Gloomwood</em>. The soundtrack
+                    has not yet been officially released.
+                </p>
+            </article>
+
+
+            <article class="credit"
+                     data-filter-item="music"
+                     data-aliases="taylor-shechet">
+                <div class="credit-heading">
+                    <h3><em>RUNT OST</em></h3>
+                    <span>2024</span>
+                </div>
+                <p class="roles">
+                    Music · Co-composer with Stephen Spies
+                </p>
+                <p class="organization">
+                    Grimtaste Studios / DreadXP
+                </p>
+                <p class="description">
+                    Officially released soundtrack, co-composed with
+                    Stephen Spies.
+                </p>
+            </article>
+
+
+            <article class="credit"
+                     data-filter-item="music"
+                     data-aliases="taylor-shechet">
+                <div class="credit-heading">
+                    <h3><em>The Cave Diver OST</em></h3>
+                    <span>2024</span>
+                </div>
+                <p class="roles">
+                    Music · Sound Design
+                </p>
+                <p class="organization">
+                    OVSKO
+                </p>
+                <p class="description">
+                    Officially released original game soundtrack.
+                </p>
+            </article>
+
 
             <article class="credit"
                      data-filter-item="music"
@@ -403,7 +461,7 @@
 
             <article class="credit"
                      data-filter-item="music"
-                     data-aliases="tlr taylor-shechet">
+                     data-aliases="taylor-shechet tlr">
                 <div class="credit-heading">
                     <h3><em>Selected Releases</em></h3>
                     <span></span>
@@ -579,12 +637,34 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const buttons = group.querySelectorAll(".filter-button");
         const section = group.closest("section");
+        const filterType = group.dataset.filterGroup;
+
         const items = section.querySelectorAll(
-            '[data-filter-item="' + group.dataset.filterGroup + '"]'
+            '[data-filter-item="' + filterType + '"]'
         );
 
-        buttons.forEach(function (button) {
+        function applyFilter(filter) {
+            items.forEach(function (item) {
 
+                if (filter === "all") {
+                    item.style.display = "";
+                    return;
+                }
+
+                const filters =
+                    item.dataset.roles ||
+                    item.dataset.aliases ||
+                    "";
+
+                const matches = filters
+                    .split(/\s+/)
+                    .includes(filter);
+
+                item.style.display = matches ? "" : "none";
+            });
+        }
+
+        buttons.forEach(function (button) {
             button.addEventListener("click", function () {
 
                 const filter = button.dataset.filter;
@@ -594,32 +674,18 @@ document.addEventListener("DOMContentLoaded", function () {
                 });
 
                 button.classList.add("active");
-
-                items.forEach(function (item) {
-
-                    if (filter === "all") {
-                        item.style.display = "";
-                        return;
-                    }
-
-                    const filters =
-                        item.dataset.roles ||
-                        item.dataset.aliases ||
-                        "";
-
-                    const matches = filters
-                        .split(" ")
-                        .includes(filter);
-
-                    item.style.display = matches ? "" : "none";
-                });
+                applyFilter(filter);
             });
         });
-    });
 
+        const activeButton = group.querySelector(".filter-button.active");
+
+        if (activeButton) {
+            applyFilter(activeButton.dataset.filter);
+        }
+    });
 });
 </script>
 
 </body>
 </html>
-```
