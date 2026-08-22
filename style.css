@@ -1,3 +1,4 @@
+```css
 :root {
     --text: #222;
     --muted: #777;
@@ -65,9 +66,47 @@ body {
 /* Gaussian splat */
 
 .splat-container {
+    position: relative;
     width: 300px;
     aspect-ratio: 1;
     overflow: hidden;
+
+    -webkit-mask-image: linear-gradient(
+        to bottom,
+        transparent 0%,
+        black 10%,
+        black 90%,
+        transparent 100%
+    );
+
+    mask-image: linear-gradient(
+        to bottom,
+        transparent 0%,
+        black 10%,
+        black 90%,
+        transparent 100%
+    );
+
+    -webkit-mask-composite: intersect;
+    mask-composite: intersect;
+}
+
+.splat-container::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+
+    background:
+        linear-gradient(
+            to right,
+            var(--background) 0%,
+            transparent 10%,
+            transparent 90%,
+            var(--background) 100%
+        );
+
+    z-index: 2;
 }
 
 .splat-container iframe {
@@ -322,3 +361,4 @@ footer p {
         padding-left: 14px;
     }
 }
+```
