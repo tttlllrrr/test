@@ -47,6 +47,28 @@ body {
     font-size: 1.05rem;
 }
 
+
+/* Social links */
+
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 18px;
+    margin-top: 22px;
+    font-size: 0.9rem;
+}
+
+.social-links a {
+    color: var(--muted);
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    color: var(--text);
+    opacity: 1;
+}
+
+
 main {
     padding-top: 48px;
 }
@@ -135,7 +157,7 @@ p {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
-    margin-bottom: 56px;
+    margin-bottom: 72px;
 }
 
 .filter-group label {
@@ -222,6 +244,11 @@ footer p {
         padding: 48px 0 36px;
     }
 
+    .social-links {
+        gap: 6px 14px;
+        margin-top: 20px;
+    }
+
     main {
         padding-top: 36px;
     }
@@ -242,7 +269,7 @@ footer p {
     }
 
     .filter-group {
-        margin-bottom: 56px;
+        margin-bottom: 72px;
     }
 
     .filter-group button {
