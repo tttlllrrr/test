@@ -4,6 +4,7 @@
     --rule: #d8d8d8;
     --background: #fafafa;
     --link: #333333;
+    --button-background: #eeeeee;
 }
 
 * {
@@ -12,6 +13,7 @@
 
 html {
     font-size: 16px;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -123,19 +125,55 @@ section {
 
 .intro {
     max-width: 680px;
-    margin-bottom: 50px;
+    margin-bottom: 32px;
+}
+
+.music-filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 55px;
+}
+
+.filter-button {
+    border: 1px solid var(--rule);
+    border-radius: 3px;
+    padding: 7px 12px;
+    background: transparent;
+    color: var(--text);
+    font-family: inherit;
+    font-size: 0.88rem;
+    cursor: pointer;
+    transition:
+        background-color 0.15s ease,
+        color 0.15s ease,
+        border-color 0.15s ease;
+}
+
+.filter-button:hover {
+    background: var(--button-background);
+}
+
+.filter-button.active {
+    background: var(--text);
+    border-color: var(--text);
+    color: var(--background);
+}
+
+.music-entry {
+    animation: music-fade-in 0.15s ease;
 }
 
 .music-category {
-    margin: 58px 0 30px;
+    margin: 0 0 30px;
     padding-top: 18px;
     border-top: 1px solid var(--rule);
     font-size: 1.15rem;
     font-weight: normal;
 }
 
-.music-category:first-of-type {
-    margin-top: 0;
+.music-entry + .music-entry {
+    margin-top: 58px;
 }
 
 .aliases {
@@ -158,6 +196,16 @@ footer {
     border-top: 1px solid var(--rule);
     color: var(--muted);
     font-size: 0.85rem;
+}
+
+@keyframes music-fade-in {
+    from {
+        opacity: 0.7;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 @media (max-width: 600px) {
@@ -193,5 +241,15 @@ footer {
     .entry,
     .credit {
         margin-bottom: 38px;
+    }
+
+    .music-filter {
+        gap: 6px;
+        margin-bottom: 42px;
+    }
+
+    .filter-button {
+        padding: 6px 9px;
+        font-size: 0.82rem;
     }
 }
