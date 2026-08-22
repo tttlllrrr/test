@@ -128,28 +128,45 @@ p {
     color: var(--muted);
 }
 
+
+/* Filters */
+
 .filter-group {
     display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 42px;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 56px;
 }
 
 .filter-group label {
+    width: 100%;
     color: var(--muted);
     font-size: 0.9rem;
 }
 
-.filter-group select {
-    padding: 8px 32px 8px 10px;
+.filter-group button {
+    padding: 7px 12px;
     border: 1px solid var(--border);
     border-radius: 3px;
-    background: white;
+    background: transparent;
     color: var(--text);
     font: inherit;
     font-size: 0.9rem;
     cursor: pointer;
 }
+
+.filter-group button:hover {
+    background: #eee;
+}
+
+.filter-group button.active {
+    background: var(--text);
+    color: white;
+    border-color: var(--text);
+}
+
+
+/* Project details */
 
 .project {
     margin-top: 28px;
@@ -166,6 +183,9 @@ p {
     font-size: 0.9rem;
 }
 
+
+/* Links */
+
 a {
     color: inherit;
     text-decoration-thickness: 1px;
@@ -175,6 +195,9 @@ a {
 a:hover {
     opacity: 0.65;
 }
+
+
+/* Footer */
 
 footer {
     padding: 32px 0 48px;
@@ -186,6 +209,9 @@ footer {
 footer p {
     margin: 0;
 }
+
+
+/* Mobile */
 
 @media (max-width: 600px) {
     .container {
@@ -216,14 +242,11 @@ footer p {
     }
 
     .filter-group {
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 6px;
-        margin-bottom: 42px;
+        margin-bottom: 56px;
     }
 
-    .filter-group select {
-        width: 100%;
+    .filter-group button {
+        font-size: 0.85rem;
     }
 
     .project {
