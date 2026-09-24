@@ -110,9 +110,45 @@ body {
 .social-links {
     display: flex;
     flex-wrap: wrap;
-    gap: 6px 18px;
+    gap: 10px 20px;
     margin-top: 22px;
-    font-size: 0.9rem;
+}
+
+.social-links a {
+    color: #5f6870;
+    text-decoration: none;
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+
+    padding: 2px 4px;
+
+    background:
+        linear-gradient(
+            to bottom,
+            transparent 0%,
+            transparent 52%,
+            #e8ebed 52%,
+            #e8ebed 100%
+        );
+
+    transition:
+        color 0.15s ease,
+        background-size 0.15s ease;
+}
+
+.social-links a:hover {
+    color: var(--text);
+
+    background:
+        linear-gradient(
+            to bottom,
+            transparent 0%,
+            transparent 35%,
+            #d9dde0 35%,
+            #d9dde0 100%
+        );
 }
 
 .social-links a {
