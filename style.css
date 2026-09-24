@@ -301,6 +301,7 @@ section details[open] summary::after {
 .about-summary-description {
     color: var(--muted);
     font-weight: 400;
+    display: block;
 }
 
 section details summary:hover .about-summary-role {
