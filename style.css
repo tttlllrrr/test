@@ -248,6 +248,7 @@ section details summary {
     line-height: 1.55;
     cursor: pointer;
     list-style: none;
+    text-decoration: none;
 }
 
 section details summary::-webkit-details-marker {
@@ -277,26 +278,14 @@ section details[open] summary::after {
     content: "−";
 }
 
-.about-summary-role {
-    font-weight: 600;
-}
-
-.about-summary-separator {
-    margin: 0 0.18em;
-    color: var(--muted);
-    font-weight: 400;
-}
-
 .about-summary-description {
-    color: var(--muted);
+    color: var(--text);
     font-weight: 400;
     display: block;
 }
 
-section details summary:hover .about-summary-role {
-    text-decoration: underline;
-    text-decoration-thickness: 1px;
-    text-underline-offset: 3px;
+section details summary:hover {
+    text-decoration: none;
 }
 
 section details > p:last-child {
@@ -449,12 +438,14 @@ footer p {
         padding-left: 14px;
     }
 
+
     /* About */
 
     section details summary {
         padding-right: 28px;
         font-size: 1rem;
         line-height: 1.5;
+        text-decoration: none;
     }
 
     section details summary::after {
