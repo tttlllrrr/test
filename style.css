@@ -208,6 +208,76 @@ p {
 }
 
 
+/* About */
+
+section details {
+    margin: 0;
+}
+
+section details summary {
+    position: relative;
+    display: block;
+    padding-right: 36px;
+    color: var(--text);
+    font-size: 1.05rem;
+    line-height: 1.55;
+    cursor: pointer;
+    list-style: none;
+}
+
+section details summary::-webkit-details-marker {
+    display: none;
+}
+
+section details summary::marker {
+    display: none;
+}
+
+section details summary::after {
+    content: "+";
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: var(--muted);
+    font-size: 1rem;
+    line-height: 1.55;
+    font-weight: 400;
+}
+
+section details[open] summary {
+    margin-bottom: 24px;
+}
+
+section details[open] summary::after {
+    content: "−";
+}
+
+.about-summary-role {
+    font-weight: 600;
+}
+
+.about-summary-separator {
+    margin: 0 0.18em;
+    color: var(--muted);
+    font-weight: 400;
+}
+
+.about-summary-description {
+    color: var(--muted);
+    font-weight: 400;
+}
+
+section details summary:hover .about-summary-role {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+}
+
+section details > p:last-child {
+    margin-bottom: 0;
+}
+
+
 /* Filters */
 
 .filter-group {
@@ -348,5 +418,21 @@ footer p {
     .project {
         padding-left: 14px;
     }
+
+    /* About */
+
+    section details summary {
+        padding-right: 28px;
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    section details summary::after {
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+
+    section details[open] summary {
+        margin-bottom: 22px;
+    }
 }
-```
