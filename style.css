@@ -1,3 +1,4 @@
+
 :root {
     --text: #222;
     --muted: #777;
@@ -27,7 +28,6 @@ body {
     width: min(var(--content-width), calc(100% - 48px));
     margin: 0 auto;
 }
-
 
 /* Header */
 
@@ -61,8 +61,7 @@ body {
     font-size: 1.05rem;
 }
 
-
-/* Gaussian splat */
+/* Interactive 3D portrait */
 
 .splat-container {
     position: relative;
@@ -78,7 +77,6 @@ body {
     border: 0;
 }
 
-
 /* Soft fade around all four edges */
 
 .splat-container::after {
@@ -86,7 +84,6 @@ body {
     position: absolute;
     inset: 0;
     pointer-events: none;
-
     background:
         linear-gradient(
             to right,
@@ -103,7 +100,6 @@ body {
             var(--background) 100%
         );
 }
-
 
 /* Social links */
 
@@ -122,7 +118,6 @@ body {
     font-weight: 500;
     letter-spacing: 0.02em;
     padding: 0 1px;
-
     background:
         linear-gradient(
             to bottom,
@@ -131,15 +126,11 @@ body {
             #e9ecee 58%,
             #e9ecee 100%
         );
-
-    transition:
-        color 0.15s ease,
-        background 0.15s ease;
+    transition: color 0.15s ease, background 0.15s ease;
 }
 
 .social-links a:hover {
     color: var(--text);
-
     background:
         linear-gradient(
             to bottom,
@@ -150,6 +141,7 @@ body {
         );
 }
 
+/* Main content */
 
 main {
     padding-top: 48px;
@@ -182,6 +174,8 @@ h4 {
 p {
     margin: 0 0 18px;
 }
+
+/* Experience and credits */
 
 .entry,
 .credit {
@@ -232,8 +226,7 @@ p {
     color: var(--muted);
 }
 
-
-/* About */
+/* About section */
 
 section details {
     margin: 0;
@@ -248,7 +241,6 @@ section details summary {
     line-height: 1.55;
     cursor: pointer;
     list-style: none;
-    text-decoration: none;
 }
 
 section details summary::-webkit-details-marker {
@@ -278,30 +270,33 @@ section details[open] summary::after {
     content: "−";
 }
 
-.about-summary-description {
-    display: block;
-    max-width: 680px;
-    padding-left: 18px;
-    border-left: 1px solid #cfd2d4;
-    color: #444;
-    font-size: 1.15rem;
-    line-height: 1.55;
-    font-weight: 400;
-    font-style: italic;
-    text-decoration: none;
+.about-summary-role {
+    font-weight: 600;
 }
 
-section details summary:hover,
-section details summary:hover .about-summary-description {
-    text-decoration: none;
+.about-summary-separator {
+    margin: 0 0.18em;
+    color: var(--muted);
+    font-weight: 400;
+}
+
+.about-summary-description {
+    color: var(--muted);
+    font-weight: 400;
+    display: block;
+}
+
+section details summary:hover .about-summary-role {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
 }
 
 section details > p:last-child {
     margin-bottom: 0;
 }
 
-
-/* Filters */
+/* Filter buttons */
 
 .filter-group {
     display: flex;
@@ -337,7 +332,6 @@ section details > p:last-child {
     border-color: var(--text);
 }
 
-
 /* Project details */
 
 .project {
@@ -355,7 +349,6 @@ section details > p:last-child {
     font-size: 0.9rem;
 }
 
-
 /* Links */
 
 a {
@@ -367,7 +360,6 @@ a {
 a:hover {
     opacity: 0.65;
 }
-
 
 /* Footer */
 
@@ -382,6 +374,31 @@ footer p {
     margin: 0;
 }
 
+/* Keyboard accessibility */
+
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 4px;
+}
+
+/* Respect reduced-motion preferences */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
 
 /* Mobile */
 
@@ -446,14 +463,10 @@ footer p {
         padding-left: 14px;
     }
 
-
-    /* About */
-
     section details summary {
         padding-right: 28px;
         font-size: 1rem;
         line-height: 1.5;
-        text-decoration: none;
     }
 
     section details summary::after {
@@ -463,12 +476,5 @@ footer p {
 
     section details[open] summary {
         margin-bottom: 22px;
-    }
-
-    .about-summary-description {
-        max-width: none;
-        padding-left: 14px;
-        font-size: 1.02rem;
-        line-height: 1.5;
     }
 }
